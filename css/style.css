@@ -141,9 +141,6 @@ hr {
   .slider a.white__button:hover {
     background: red;
     border: 1px solid red;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out; }
 
 /*About us*/
@@ -435,22 +432,25 @@ a.button {
     .red__button > .button:hover {
       background-color: white;
       color: black;
-      border: white; }
+      border: white;
+      transition: background-color 1s ease-out; }
 
 /* News of the day*/
 .news__day {
-  background: white;
-  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 5rem;
+  padding-top: 5rem; }
 
 .news__title {
   text-align: center;
   background: url("../img/cuttle.png");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 5rem;
   width: 100%; }
   .news__title h2 {
     text-transform: uppercase;
@@ -461,7 +461,7 @@ a.button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 5rem;
+  padding: 5rem;
   justify-content: baseline;
   align-items: normal;
   align-self: baseline; }
@@ -489,11 +489,6 @@ a.button {
   flex: 3;
   align-self: auto; }
 
-.news__day {
-  background-color: white;
-  position: relative;
-  z-index: 0; }
-
 .news__content--title a {
   text-transform: uppercase;
   color: #0a0a0a;
@@ -510,7 +505,7 @@ a.button {
 .news__img {
   order: 1;
   flex: 3;
-  background-image: url(../img/banner-1.jpg);
+  background-image: url(../img/news-6-580x500.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
@@ -544,7 +539,8 @@ a.button {
     border: 1px solid grey;
     padding: .2rem;
     color: grey;
-    margin-right: .5rem; }
+    margin-right: .5rem;
+    text-decoration: none; }
     .news__content--tags a:hover {
       color: red;
       border: 1px solid red; }
@@ -583,18 +579,223 @@ ul.breadcrumbs {
 .book__wrapper {
   order: 0;
   flex: 1;
-  background: #000; }
+  background: #000;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .book__title {
-  text-align: center;
   text-align: center;
   background: url(../img/scallop-2.png);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   width: 100%; }
   .book__title h2 {
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    font-size: 2.5rem; }
+
+.book__form {
+  display: flex;
+  flex-direction: column; }
+
+.form__wrapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.form__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.input__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 1rem; }
+
+.input-icon-wrap {
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto; }
+
+.input-icon {
+  background: transparent;
+  color: grey; }
+
+.input-with-icon {
+  border: none;
+  flex: 1; }
+
+.input-icon, .input-with-icon {
+  padding: 10px;
+  background: transparent; }
+
+.select__input {
+  padding-right: 8.5rem;
+  background: transparent;
+  color: grey;
+  border-color: grey;
+  border-right: none; }
+
+.form__button {
+  text-align: center;
+  padding-top: 4rem; }
+  .form__button a {
+    background: red;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase; }
+    .form__button a:hover {
+      background: transparent;
+      border: 1px solid #fff;
+      box-sizing: border-box;
+      transition: background-color 1s ease-out; }
+
+/*Upcoming event*/
+.upcoming__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  background: #fff; }
+
+.opening__hour {
+  order: 0;
+  flex: 1;
+  align-self: auto;
+  padding: 5rem; }
+  .opening__hour .opening__wrapper {
+    background: url("../img/coming-soon-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    padding: 2rem; }
+    .opening__hour .opening__wrapper .opening__content {
+      border: 1px solid grey;
+      border-radius: .5rem; }
+
+.opening__title {
+  text-align: center; }
+  .opening__title h3 {
+    color: #fff;
+    font-size: 2rem; }
+
+.opening__list--li {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative; }
+  .opening__list--li::before {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: '';
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
+    width: 55%; }
+
+.upcoming__content {
+  order: 1;
+  flex: 1;
+  align-self: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 5rem; }
+
+.upcoming__title {
+  text-align: center;
+  background: url(../img/shrimp.png);
+  background-repeat: no-repeat;
+  background-position: top; }
+  .upcoming__title h2 {
+    text-transform: uppercase;
+    color: red;
+    font-size: 2.5rem;
+    padding-bottom: 5rem; }
+
+.upcoming__subtitle {
+  text-align: center; }
+  .upcoming__subtitle h3 {
+    color: #000;
+    font-size: 1.5rem; }
+  .upcoming__subtitle span {
+    color: grey; }
+  .upcoming__subtitle p {
+    color: grey; }
+
+/* .timing {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-around;
+     align-content: flex-start;
+     align-items: center;
+         
+     .hours {
+         order: 0;
+         flex: 0 1 auto;
+         align-self: auto;
+         border: 1px solid grey;
+         padding: 3rem;
+         }
+     
+     .minutes {
+         order: 1;
+         flex: 0 1 auto;
+         align-self: auto;
+         border: 1px solid grey;
+         padding: 3rem;
+         }
+     
+     .seconds {
+         order: 2;
+         flex: 0 1 auto;
+         align-self: auto;
+         border: 1px solid grey;
+         padding: 3rem;
+         }
+ }*/
+.timing {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative; }
+  .timing .boxes {
+    display: flex;
+    justify-content: space-around; }
+    .timing .boxes .timing__box {
+      border: 1px solid grey;
+      padding: 5rem;
+      text-align: center; }
+  .timing .box__info {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 10.5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-content: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: gray; }
+
+.timing__box--info {
+  background: #fff; }
 
 /*# sourceMappingURL=style.css.map */
