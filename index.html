@@ -9,6 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <div class="top__wrapper">
     <header>
         <div class="header__top">
             <div class="header__top--list">
@@ -35,7 +36,7 @@
                 <img src="img/gamba.png" alt="Gamba restaurant"/>
             </div>
             <div class="header__bottom--menu">
-                <ul class="dropdown menu" data-dropdown-menu>
+                <ul class="dropdown menu">
                     <li class="has-submenu is-active">
                       <a href="#0">Home</a>
                     </li>
@@ -74,9 +75,11 @@
             </div>   
        </div>
     </section>
+</div>
     <!--End Slider-->
 
     <!--About us-->
+    <div class="second__wrapper">
     <section class="about__section">
             <div class="about__img">
                <!-- <img src="/img/banner-1.jpg">-->
@@ -113,7 +116,7 @@
                                 </div>
                                 <div class="box__star"></div>
                                 <div class="box__price">
-                                    <span style="display:inline-flex;">
+                                    <span style="display:flex;justify-content: center;">
                                         <h5>
                                             <sup>$</sup>58
                                         </h5>
@@ -133,11 +136,11 @@
                                     <h4>Crawfish Dishs</h4>
                                 </div>
                                 <div class="box__img">
-                                    <img src="img/crawfish.png">
+                                    <img src="img/kingcrab.png">
                                 </div>
                                 <div class="box__star"></div>
                                 <div class="box__price">
-                                    <span style="display:inline-flex;">
+                                    <span style="display:flex;justify-content: center;">
                                         <h5>
                                             <sup>$</sup>58
                                         </h5>
@@ -157,11 +160,11 @@
                                     <h4>Crawfish Dishs</h4>
                                 </div>
                                 <div class="box__img">
-                                    <img src="img/crawfish.png">
+                                    <img src="img/clamp.png">
                                 </div>
                                 <div class="box__star"></div>
                                 <div class="box__price">
-                                    <span style="display:inline-flex;">
+                                    <span style="display:flex;justify-content: center;">
                                         <h5>
                                             <sup>$</sup>
                                             58
@@ -405,6 +408,7 @@
                 
             </div><!--End News Wrapper-->
     </section>
+</div><!--End Second Wrapper-->
     <!--End News Of The Day-->
 
     <!--Book Your Table-->
@@ -524,13 +528,13 @@
                 <div class="timing">
                     <div class="boxes">
                         <div class="timing__box">
-                            <div class="hours">1</div>
+                            <div class="hours"><a>11</a></div>
                         </div>
                         <div class="timing__box">
-                            <div class="minutes">2</div>
+                            <div class="minutes"><a>2</a></div>
                         </div>
                         <div class="timing__box">
-                            <div class="seconds">3</div> 
+                            <div class="seconds"><a>3</a></div> 
                         </div>  
                     </div>
                     <div class="box__info">
@@ -538,10 +542,96 @@
                         <div class="timing__box--info">Minutes</div>
                         <div class="timing__box--info">Seconds</div>
                     </div>
+                    <div class="timing__button">
+                        <a href="#" type="button">Resever now</a>
+                    </div>
                 </div>
+                
             </div>
         </section>
+        <!--End Upcoming Event-->
 
+        <!--Small red Banner-->
+        <section class="small__banner">
+            <div class="small__banner--text">
+                <h4>Check how all the dishes are cooked today!</h4>
+                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet</p>
+            </div>
+            <div class="small__banner--form">
+                <form>
+                    <input type="text" placeholder="Type your Email">
+                    <a href="#" type="button">Get offer <i class="fas fa-arrow-right"></i></a>
+                    <hr>
+                </form>
+               
+            </div>
+        </section>
+        <!--End Small Red Banner-->
+
+        <!--Footer-->
+        <footer>
+                <div class="footer__first">
+                    <img src="img/gamba-2.png"/>
+                    <p>Ut enim ad minim veniam, quis nostrud cittion ullamco laboris nisi ut aliquip cosquat uis aute irure dolor ullamco nisi inkabris reprhenderit labore. cosquat uis aute irure dolor ullamco</p>
+                </div>
+                <div class="footer__second">
+                    <h4>Delivery Services</h4>
+                    <ul>
+                        <li style="order:0; flex:1;"><i class="fas fa-building"></i>Gamba Restaurant</li>
+                        <li style="order:1; flex:1;"><i class="fas fa-envelope"></i>support@gamba.com</li>
+                        <li style="order:2; flex:1;"><i class="fas fa-phone"></i>+84. 090 797 979</li>
+                        <li style="order:3; flex:1;"><i class="fas fa-map-marker-alt"></i>416 Ridge Road, Pratt, KS 67124</li>
+                    </ul>
+                </div>
+                <div class="footer__third">
+                    <h4>Open Time</h4>
+                    <ul>
+                        <li style="order:0; flex:1;">LUNCH SERVICE</li>
+                        <li style="order:1; flex:1;">Friday - Sunday: 11am - 1.30pm</li>
+                        <li style="order:2; flex:1;">DINNER SERVICE</li>
+                        <li style="order:3; flex:1;">Daily: Bookings Available 6am - 9.30pm</li>
+                    </ul>
+                </div>
+                <div class="footer__fourth">
+                    <h4>Instagram</h4>
+                    <div class="gallery">
+                        <ul>
+                            <li>
+                                <a target="_blank" href="img/1.jpg">
+                                    <img src="img/1.jpg" alt="" style="width:50px">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="img/2.jpg">
+                                    <img src="img/2.jpg" alt="" style="width:50px">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="img/3.jpg">
+                                    <img src="img/3.jpg" alt="" style="width:50px">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="img/4.jpg">
+                                    <img src="img/4.jpg" alt="" style="width:50px">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="img/5.jpg">
+                                    <img src="img/5.jpg" alt="" style="width:50px">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="img/6.jpg">
+                                    <img src="img/6.jpg" alt="" style="width:50px">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </footer>
        
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </body>
