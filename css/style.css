@@ -4,7 +4,7 @@ body {
   margin: 0 auto;
   background: url(../img/homepage-3.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   z-index: 1;
   position: relative;
   background-attachment: fixed;
@@ -13,26 +13,10 @@ body {
 section {
   display: flex; }
 
-.top__wrapper {
-  order: 0;
-  flex: 1;
-  background-color: transparent;
-  border-width: 0px;
-  border-style: solid solid solid solid;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-image: url(../img/homepage-3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center; }
-
 header {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-content: stretch;
   width: 100%;
@@ -124,6 +108,9 @@ hr {
     .header__bottom--menu ul li a:hover {
       color: red; }
 
+.icon__shop {
+  padding: 1rem; }
+
 /*SLIDER*/
 .slider__section {
   display: flex;
@@ -133,7 +120,6 @@ hr {
   align-items: flex-start;
   flex-wrap: wrap;
   padding-top: 5rem;
-  padding-bottom: 5rem;
   z-index: 1;
   position: relative; }
 
@@ -241,6 +227,19 @@ hr {
   text-align: right; }
 
 /*Special menu*/
+.special__section {
+  order: 0;
+  flex: 1;
+  background-color: transparent;
+  border-width: 0px;
+  border-style: solid solid solid solid;
+  border-radius: 0px;
+  background-image: url(http://restaurant.gamba-themes.com/wp-content/uploads/2016/09/special-menu-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
+
 .special__section {
   display: flex;
   flex-direction: column;
@@ -965,5 +964,147 @@ footer {
   padding-left: 0;
   flex-direction: row;
   justify-content: space-around; }
+
+/*Media Query*/
+/*@media only screen and (min-device-width : 1024px)  and (orientation : landscape){
+      .small__banner {
+        flex-direction: column;
+        justify-content: space-between;
+        .small__banner--text {
+            padding-bottom: 2rem;
+        }
+}*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .header__top {
+    flex-wrap: nowrap;
+    justify-content: space-around; }
+    .header__top .header__top--list ul {
+      display: inherit; }
+
+  .header__bottom {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; }
+    .header__bottom ul {
+      align-items: center;
+      padding-left: 1rem; }
+      .header__bottom ul li {
+        padding-right: .5rem; }
+      .header__bottom ul .icon__shop {
+        padding-left: 1rem;
+        padding-right: 0; }
+
+  .slider__section {
+    align-content: flex-start; }
+
+  .book__table {
+    flex-direction: row; }
+
+  .input-date {
+    padding-left: 1.5rem; }
+
+  .upcoming__section {
+    flex-direction: row; }
+
+  .small__banner {
+    flex-direction: column;
+    justify-content: space-between; }
+    .small__banner .small__banner--text {
+      padding-bottom: 2rem; }
+    .small__banner .small__banner--form {
+      padding-top: 0;
+      padding-left: 4rem; }
+      .small__banner .small__banner--form form {
+        width: 100%; }
+        .small__banner .small__banner--form form a {
+          float: right; }
+
+  .footer__second li {
+    display: flex;
+    flex-direction: column; } }
+@media (max-width: 768px) {
+  .header__top {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .header__top .header__top--list ul {
+      display: inherit; }
+
+  .header__bottom {
+    flex-wrap: wrap;
+    align-items: center; }
+    .header__bottom ul {
+      align-items: center;
+      padding-left: 2rem; }
+      .header__bottom ul li {
+        padding-right: .5rem; }
+      .header__bottom ul .icon__shop {
+        padding-left: 1rem;
+        padding-right: 0; }
+
+  .about__section {
+    flex-direction: column; }
+    .about__section .about__img {
+      height: 40vh; }
+
+  .special__section .menu__boxes {
+    flex-direction: column; }
+  .special__section .box__button {
+    padding: 0;
+    padding-top: 2rem; }
+
+  .menu__section {
+    flex-direction: column; }
+    .menu__section .menu__img {
+      height: 40vh; }
+
+  .news__wrapp {
+    display: -webkit-box; }
+
+  .input-date {
+    padding-left: 1.5rem; }
+
+  .book__table {
+    flex-direction: column; }
+    .book__table .empty {
+      height: 40vh; }
+
+  .upcoming__section {
+    flex-direction: column; }
+
+  .small__banner {
+    flex-direction: column;
+    justify-content: space-between; }
+    .small__banner .small__banner--text {
+      padding-bottom: 2rem; }
+    .small__banner .small__banner--form {
+      padding-top: 0;
+      padding-left: 4rem; }
+      .small__banner .small__banner--form form {
+        width: 100%; }
+        .small__banner .small__banner--form form a {
+          float: right; }
+
+  .footer__second li {
+    display: flex;
+    flex-direction: column; } }
+   /* @media (max-width: 400px) {
+        .header__top  {
+            justify-content:center;
+    
+        .header__top--list {
+            justify-content:center;
+        }
+    }
+    
+    .header__bottom {
+        justify-content: center;
+    }
+    }
+}*/
+/*@media all and (max-width: 1690px) { ...}
+@media all and (max-width: 1280px) { ...}
+@media all and (max-width: 980px) { ... }
+@media all and (max-width: 736px) { ... }
+@media all and (max-width: 480px) {...}*/
 
 /*# sourceMappingURL=style.css.map */
